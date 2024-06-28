@@ -7,6 +7,7 @@ import Info from './pages/Info'
 import MovieSelection from './pages/MovieSelection'
 import Browse from './pages/Browse'
 import Notfound from './pages/404'
+import './style.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

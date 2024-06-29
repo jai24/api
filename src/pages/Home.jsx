@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-// import './style.css'
-
+import { useNavigate } from "react-router-dom";
 export default function Home() {
 
   const [data, setData] = useState({
@@ -18,6 +17,8 @@ export default function Home() {
     mobile: "",
     checkbox: "",
   })
+
+  const navigate = useNavigate()
 
   const handleInput = (e) => {
     setData({
@@ -55,15 +56,17 @@ export default function Home() {
         mobile: "",
         checkbox: false,
       })
+      navigate('/selection')
     }
   }
 
   return (
+    <div className="bodyContainer">
     <div className="container">
       <h2 className="leftHeading">Discover new things on Superapp</h2>
       <form onSubmit={handleSubmit} >
-      <h1>Super app</h1>
-      <p className="p1">Create your new account</p>
+        <h1>Super app</h1>
+        <p className="p1">Create your new account</p>
         <input type="text" placeholder=" Name" name='name' value={data.name} onChange={handleInput} />
         <span style={{ color: 'red' }}>{errors.name}</span>
         <input type="text" placeholder=" UserName" name='username' value={data.username} onChange={handleInput} />
@@ -82,6 +85,6 @@ export default function Home() {
         <p className="terms">To learn more about how Superapp collects, uses, shares and protects your personal data please head Superapp <span className="highlight">Privacy Policy</span></p>
       </form>
 
-    </div>
+    </div></div>
   )
 }

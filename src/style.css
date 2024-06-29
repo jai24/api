@@ -6,12 +6,13 @@
     padding: 0;
     margin: 0;
 }
-body{
+.bodyContainer{
     background-image: url('./assets/rapImage.png');
     background-repeat: no-repeat;
     background-size: 50% 100vh;
     background-color: black;
     font-family: "Roboto";
+    height: 100vh;
 }
 
     .leftHeading{
@@ -30,11 +31,10 @@ body{
     gap: 10px;
     width: 30vw;
     margin-left: 60%;
-    margin-top: 6vh;
-    /* margin-right: auto; */
   }
 
   .container h1{
+    margin-top: 5vh;
     font-family: "Single Day", cursive;
     font-weight: 700;
     font-size: 55px;
